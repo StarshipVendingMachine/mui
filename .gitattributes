@@ -1,2 +1,6 @@
-*.sln text eol=crlf
-*.cs text eol=crlf
+# add line (because 'crlf')
+text=false
+
+# anotation original line
+#*.sln text eol=crlf
+#*.cs text eol=crlf
