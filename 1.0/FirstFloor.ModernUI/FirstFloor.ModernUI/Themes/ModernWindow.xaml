@@ -37,12 +37,12 @@
                             </Storyboard>
                         </Border.Resources>
 
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0">
                             <AdornerDecorator>
                                 <Grid x:Name="LayoutRoot">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="36" />
+                                        <RowDefinition Height="0" />
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
@@ -50,17 +50,18 @@
                                     <ContentControl Grid.RowSpan="5" Content="{TemplateBinding BackgroundContent}" />
 
                                     <!-- title bar -->
-                                    <Grid>
+                                    <!-- #FFA200FF -->
+                                    <Grid Background="BlueViolet">  
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="96" />
                                         </Grid.ColumnDefinitions>
 
                                         <!-- title -->
                                         <TextBlock Text="{TemplateBinding Title}" Margin="8,0" VerticalAlignment="Center" Style="{StaticResource ModernWindowTitle}"
-                                                   DataContext="{TemplateBinding IsTitleVisible}"
+                                                   DataContext="{TemplateBinding IsTitleVisible}" Foreground="White"
                                                    Visibility="{Binding Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                                         <!-- title links -->
